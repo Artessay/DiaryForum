@@ -1,4 +1,4 @@
-name: GitHub Actions Build and Deploy Demo
+name: React Build and Deploy
 on:
   push:
     branches:
@@ -7,13 +7,22 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+    # fetch code
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
 
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@master
+    # install dependency and build
+    - name: Install and Build
+      run: |
+        npm install
+        npm run-script build
+    
+    # deploy to github pages
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
+        BRANCH: github-pages
         FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
