@@ -19,10 +19,16 @@ jobs:
     
     # deploy to github pages
     - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: build # The folder the action should deploy.
-          
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: main
+          BRANCH: github-pages
+          FOLDER: build
+        # uses: JamesIves/github-pages-deploy-action@v4
+        # with:
+        #   folder: build # The folder the action should deploy.
+
     # - name: Deploy
     #   uses: JamesIves/github-pages-deploy-action@releases/v3
     #   env:
