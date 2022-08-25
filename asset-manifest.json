@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DiaryForum/static/css/main.9cf32c0c.css",
+    "main.js": "/DiaryForum/static/js/main.d51a942d.js",
+    "static/js/787.e9aa6181.chunk.js": "/DiaryForum/static/js/787.e9aa6181.chunk.js",
+    "index.html": "/DiaryForum/index.html",
+    "main.9cf32c0c.css.map": "/DiaryForum/static/css/main.9cf32c0c.css.map",
+    "main.d51a942d.js.map": "/DiaryForum/static/js/main.d51a942d.js.map",
+    "787.e9aa6181.chunk.js.map": "/DiaryForum/static/js/787.e9aa6181.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cf32c0c.css",
+    "static/js/main.d51a942d.js"
+  ]
+}

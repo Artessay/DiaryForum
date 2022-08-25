@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Diary App</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <p>Nice to see you!</p>
+    <p>Here will list all the diary of this user after login.</p>
+    <div id="list"></div>
+
+    <div class="view view-sessions view-sessions_login">
+        
+      <a href="/" class="path-logo" ">MyWord Diary</a>
+  
+       
+      <div class="block login-block">
+          <div class="content">
+             <div id="sendstatus"></div>
+  
+              <h1 style="font-family:Microsoft YaHei; font-size:16px; font-weight:600; letter-spacing:1 ">登录日记本</h1> 
+             
+              <form action="javascript:loginsub();" method="post" class="buttonless-form">
+               <div id="login_form">
+      <ul class="field-set field-set-stacked">
+          <li class="field field-text">
+              <label for="login_field" style="font-size:12px;">学 号*</label>
+              <input type="text" class="input-text large submit" name="stu_number" id="stu_number">
+          </li>
+          <li class="field">
+              <label for="password_field" style="font-size:12px;">密 码* <a href="forgot-password.html" tabindex="2">忘记密码？</a></label>
+              <input type="password" class="input-password large go" name="stu_pwd" id="stu_pwd">
+          </li>
+      </ul>
+      <input type="hidden" value="1" id="ifsub">
+      <input type="submit" class="btn" id="submit" name="submit"  value="登 录" />
+     
+       <div class="field-checkbox" style="float:right; margin-right:15px; margin-top:10px; color:#999">
+      
+  
+       <input  type="checkbox" id="check" name="check" value="1" checked> 下次自动登录 </div></div>
+  </form>
+      <p  align="center"><br><br> 还未注册 ?  <a style="font-weight:500" href="register.html" > 点此立即注册</a> 或 <a style="font-weight:500" href="/">返回首页</a> </p>
+  
+          </div>
+      </div>
+
+
+      <div class="path"></div>  
+      <script src="/login.js"></script>
+ 
+<script type="text/javascript" charset="utf-8">
+      Ply.ui.register('shared', {
+          view: document.body
+      });
+      </script>
+
+  
+  
+  <script type="text/javascript" charset="utf-8">
+      
+  Ply.ui.register('sessions_login');
+   
+  </script>
+  
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+  </body>
+</html>
